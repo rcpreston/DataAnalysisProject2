@@ -5,3 +5,5 @@
 setwd("~/Exploratory Data Analysis Project 2")
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
+
+motorcode <- SCC[grepl("mobile",SCC[,"EI.Sector"],ignore.case=TRUE),"SCC"]

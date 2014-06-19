@@ -16,9 +16,8 @@ em2008 <- NEI[NEI[,"year"]==2008,"Emissions"]
 
 vecem <- c(sum(em1999),sum(em2002),sum(em2005),sum(em2008))
 vecyear <- c(1999,2002,2005,2008)
-emtable <- rbind(vecem, vecyear)
 
-emtable <- data.frame(emtable,row.names=c("Emissions","Year"))
-
-plot(emtable)
+plot(x=vecyear,y=vecem,type="b",xlab="Year",
+     ylab="Total Emissions from PM2.5",
+     main="Emissions for chosen years",lwd=5)
 
