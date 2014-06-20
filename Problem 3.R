@@ -7,7 +7,7 @@
 ## emissions from 1999-2008? Use the ggplot2 
 ## plotting system to make a plot answer this question.
 
-setwd("~/Exploratory Data Analysis Project 2")
+setwd("~/git_repos/DataAnalysisProject2")
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
@@ -41,6 +41,7 @@ balt99 <- c(sum(balt99p),sum(balt99np),sum(balt99r),sum(balt99nr))
 balt02 <- c(sum(balt02p),sum(balt02np),sum(balt02r),sum(balt02nr))
 balt05 <- c(sum(balt05p),sum(balt05np),sum(balt05r),sum(balt05nr))
 balt08 <- c(sum(balt08p),sum(balt08np),sum(balt08r),sum(balt08nr))
+
 
 baltab <- cbind(balt99,balt02,balt05,balt08)
 baltab <- data.frame(baltab,row.names=c("Point","Nonpoint","Onroad","Nonroad"))

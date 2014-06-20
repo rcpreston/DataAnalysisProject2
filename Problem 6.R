@@ -5,7 +5,7 @@
 ## (fips == "06037"). Which city has seen greater 
 ## changes over time in motor vehicle emissions?
 
-setwd("~/Exploratory Data Analysis Project 2")
+setwd("~/git_repos/DataAnalysisProject2")
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
