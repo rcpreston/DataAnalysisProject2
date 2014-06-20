@@ -12,7 +12,11 @@ baltem <- NEI[NEI[,"fips"]=="24510",]
 
 balty <- aggregate(Emissions~year,data=baltem,FUN=sum)
 
+png(file="plot2.png",height=450,width=450)
+
 barplot(height=balty[,"Emissions"],names.arg=c(1999,2002,2005,2008),
         xlab="Year", ylab="Total Emissions from PM2.5 in Baltimore",
         main="Emissions from 1999 to 2008",log="")
 
+
+dev.off()

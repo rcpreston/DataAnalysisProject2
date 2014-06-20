@@ -12,6 +12,10 @@ coalem <- subset(NEI,SCC %in% coalcode)
 
 coalem <- aggregate(Emissions~year,data=coalem,FUN=sum)
 
+png(file="plot4.png",height=450,width=450)
+
 barplot(height=coalem[,"Emissions"],names.arg=c(1999,2002,2005,2008),
         xlab="Year", ylab="Total Emissions from PM2.5",
         main="Emissions for chosen years",log="")
+
+dev.off()

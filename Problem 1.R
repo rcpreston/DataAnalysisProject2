@@ -12,7 +12,10 @@ SCC <- readRDS("Source_Classification_Code.rds")
 
 vecem <- aggregate(Emissions~year,data=NEI,FUN=sum)
 
+png(file="plot1.png",height=450,width=450)
+
 barplot(height=vecem[,"Emissions"],names.arg=c(1999,2002,2005,2008),
         xlab="Year", ylab="Total Emissions from PM2.5",
         main="Emissions for chosen years",log="")
 
+dev.off()
