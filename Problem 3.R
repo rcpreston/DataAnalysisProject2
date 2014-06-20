@@ -42,9 +42,6 @@ baltab <- cbind(baltab,type)
 baltab <- data.frame(baltab)
 
 # Write plot to png file
-png(file="plot3.png",height=450,width=450)
-
-ggplot(baltab,aes(x=type,y=Emissions,fill=type,ylab="PM2.5 Emissions")) + 
+p <- ggplot(baltab,aes(x=type,y=Emissions,fill=type,ylab="PM2.5 Emissions")) + 
   geom_bar(stat="identity",position="dodge") +facet_grid(.~year)
-
-dev.off()
+ggsave(filename="plot3.png",plot=p)
