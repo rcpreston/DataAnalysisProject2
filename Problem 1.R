@@ -5,13 +5,15 @@
 ## PM2.5 emission from all sources for  each of the 
 ## years 1999, 2002, 2005, and 2008.
 
+# Get to my working directory and read in the data
 setwd("~/git_repos/DataAnalysisProject2")
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
-
+# get all of the emission data summed for each year
 vecem <- aggregate(Emissions~year,data=NEI,FUN=sum)
 
+# plotting to a png file
 png(file="plot1.png",height=450,width=450)
 
 barplot(height=vecem[,"Emissions"],names.arg=c(1999,2002,2005,2008),
